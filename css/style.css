@@ -1,0 +1,121 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #f1f1f1;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 3rem;
+    color: #00fff7;
+    text-shadow: 0 0 8px #00fff7, 0 0 16px #ff00e0;
+    letter-spacing: 2px;
+    animation: pulseText 2.5s infinite;
+}
+
+@keyframes pulseText {
+    0%, 100% { text-shadow: 0 0 8px #00fff7, 0 0 16px #ff00e0; }
+    50% { text-shadow: 0 0 14px #00fff7, 0 0 28px #ff00e0; }
+}
+
+#game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.tile {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 12px;
+    background: #1e1e1e;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.correct {
+    background: linear-gradient(145deg, #1f5731, #00ff85);
+    color: #000;
+    border: none;
+    box-shadow: 0 0 10px #00ff85, inset 0 0 10px #00ff85;
+}
+
+.present {
+    background: linear-gradient(145deg, #8f7f2b, #ffe152);
+    color: #000;
+    border: none;
+    box-shadow: 0 0 10px #ffe152, inset 0 0 10px #ffe152;
+}
+
+.absent {
+    background: #2c2c2c;
+    border: 1px solid #555;
+    color: #666;
+}
+
+#guess-input {
+    margin-top: 25px;
+    padding: 12px;
+    font-size: 1.4rem;
+    text-align: center;
+    width: 220px;
+    border-radius: 10px;
+    border: 2px solid #00fff7;
+    background-color: #121212;
+    color: #00fff7;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+#guess-input:focus {
+    box-shadow: 0 0 10px #00fff7, 0 0 20px #ff00e0;
+}
+
+.new-game-btn {
+    margin-top: 35px;
+    padding: 14px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: linear-gradient(145deg, #00fff7, #ff00e0);
+    color: #121213;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #00fff7;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.new-game-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff00e0;
+}
+
+.end-message {
+    margin-top: 25px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffeb3b;
+    text-shadow: 0 0 6px #ffeb3b;
+}
